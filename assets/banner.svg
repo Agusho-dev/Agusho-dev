@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 250" width="900" height="250" role="img" aria-labelledby="t d">
+  <title id="t">Agustín "Agusho" Tolosa</title>
+  <desc id="d">Ventana de terminal en Catppuccin Mocha. El prompt ejecuta whoami y devuelve: Agustín "Agusho" Tolosa, open source Linux tooling desde Córdoba, Argentina.</desc>
+
+  <defs>
+    <!-- El borde reproduce col.active_border de Hyprland: 3 paradas a 45 grados -->
+    <linearGradient id="hyprborde" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#89b4fa"/>
+      <stop offset="50%"  stop-color="#b4befe"/>
+      <stop offset="100%" stop-color="#cba6f7"/>
+    </linearGradient>
+
+    <!-- Revela "whoami" letra por letra: 6 pasos, uno por caracter -->
+    <clipPath id="tipeo">
+      <rect class="typer" x="47" y="86" width="63" height="22"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .mono { font-family: "JetBrains Mono","JetBrainsMono Nerd Font","Cascadia Code",
+            ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace; }
+
+    .typer  { transform-box: fill-box; transform-origin: left center;
+              transform: scaleX(0); animation: type .55s steps(6) .15s forwards; }
+    .salida { opacity: 0; animation: aparecer .35s ease-out .75s forwards; }
+    .cursor { animation: latir 1.1s steps(1) infinite; }
+
+    @keyframes type     { to { transform: scaleX(1); } }
+    @keyframes aparecer { to { opacity: 1; } }
+    @keyframes latir    { 0%,50% { opacity: 1 } 50.01%,100% { opacity: 0 } }
+
+    /* Quien pidió menos movimiento ve el resultado final, sin animación */
+    @media (prefers-reduced-motion: reduce) {
+      .typer  { animation: none; transform: scaleX(1); }
+      .salida { animation: none; opacity: 1; }
+      .cursor { animation: none; opacity: 1; }
+    }
+  </style>
+
+  <!-- Ventana: rounding 8, igual que decoration.rounding -->
+  <rect x="1.5" y="1.5" width="897" height="247" rx="8"
+        fill="#1e1e2e" stroke="url(#hyprborde)" stroke-width="3"/>
+
+  <!-- ── Prompt de starship, dibujado como geometría y no como glifos ────── -->
+  <g class="mono" font-size="13">
+    <!-- Fedora -->
+    <rect x="26" y="22" width="34" height="22" fill="#89b4fa"/>
+    <path d="M60 22 L70 33 L60 44 Z" fill="#89b4fa"/>
+    <g transform="translate(28.87,19.69) scale(0.2745)" stroke="#11111b" stroke-width="11"
+       stroke-linecap="round" fill="none">
+      <path d="M66 26 C58 23, 52 27, 52 35 L52 74"/>
+      <path d="M37 46 L64 46"/>
+    </g>
+
+    <!-- Directorio -->
+    <rect x="70" y="22" width="174" height="22" fill="#b4befe"/>
+    <path d="M244 22 L254 33 L244 44 Z" fill="#b4befe"/>
+    <text x="79" y="37.5" fill="#11111b" font-weight="700"
+          textLength="156" lengthAdjust="spacingAndGlyphs">proyectos/Agusho-dev</text>
+
+    <!-- Rama de git -->
+    <rect x="254" y="22" width="64" height="22" fill="#cba6f7"/>
+    <path d="M318 22 L328 33 L318 44 Z" fill="#cba6f7"/>
+    <g stroke="#11111b" stroke-width="1.5" fill="none">
+      <path d="M264 28.5 L264 37.5"/>
+      <path d="M264 35 C264 31, 268 30.5, 270.5 29.5"/>
+    </g>
+    <circle cx="264" cy="27" r="2" fill="#11111b"/>
+    <circle cx="264" cy="39" r="2" fill="#11111b"/>
+    <circle cx="272" cy="28.5" r="2" fill="#11111b"/>
+    <text x="280" y="37.5" fill="#11111b" font-weight="700"
+          textLength="31" lengthAdjust="spacingAndGlyphs">main</text>
+  </g>
+
+  <!-- ── El comando ───────────────────────────────────────────────────────── -->
+  <g class="mono" font-size="17">
+    <text x="26" y="102" fill="#a6e3a1" font-weight="700">❯</text>
+    <g clip-path="url(#tipeo)">
+      <text x="47" y="102" fill="#cdd6f4" textLength="61.2" lengthAdjust="spacingAndGlyphs">whoami</text>
+    </g>
+  </g>
+
+  <!-- ── La salida ────────────────────────────────────────────────────────── -->
+  <g class="salida">
+    <text class="mono" x="26" y="163" fill="#cdd6f4" font-size="38" font-weight="700"
+          textLength="470" lengthAdjust="spacingAndGlyphs">Agustín "Agusho" Tolosa</text>
+    <text class="mono" x="28" y="193" fill="#a6adc8" font-size="15">Open source Linux tooling from Córdoba, Argentina</text>
+  </g>
+
+  <!-- ── Prompt en espera ─────────────────────────────────────────────────── -->
+  <g class="mono" font-size="17">
+    <text x="26" y="228" fill="#a6e3a1" font-weight="700">❯</text>
+    <rect class="cursor" x="47" y="214" width="10" height="19" fill="#cdd6f4" opacity=".9"/>
+  </g>
+</svg>

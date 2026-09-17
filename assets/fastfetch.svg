@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 592 404" width="592" height="404" role="img" aria-labelledby="ft fd">
+  <title id="ft">fastfetch en estacion</title>
+  <desc id="fd">Fedora 44 Workstation, Hyprland sobre Wayland, Ghostty con tmux, zsh con starship, Neovim (LazyVim), Intel i5-8400 de 6 núcleos, NVIDIA GTX 1050 Ti, 16 GB de memoria, tema Catppuccin Mocha, herramientas mise, pnpm, uv y podman.</desc>
+
+  <style>
+    .mono { font-family: "JetBrains Mono","JetBrainsMono Nerd Font","Cascadia Code",
+            ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace; }
+    .k { fill: #cba6f7; font-weight: 700; }
+    .v { fill: #cdd6f4; }
+  </style>
+
+  <rect width="592" height="404" rx="8" fill="#1e1e2e"/>
+
+  <!-- Logo de Fedora vectorial: el arte ASCII se desarmaba segun la fuente
+       de quien mira, esto se ve igual en todos lados -->
+  <g transform="translate(30,125) scale(1.5)">
+    <circle cx="50" cy="50" r="46" fill="#89b4fa"/>
+    <g stroke="#1e1e2e" stroke-width="11" stroke-linecap="round" fill="none">
+      <path d="M66 26 C58 23, 52 27, 52 35 L52 74"/>
+      <path d="M37 46 L64 46"/>
+    </g>
+  </g>
+
+  <!-- Datos -->
+  <g class="mono" font-size="15">
+    <text x="210" y="60" fill="#cba6f7" font-weight="700">agusho@estacion</text>
+    <rect x="210" y="72" width="200" height="1.5" fill="#585b70"/>
+
+    <text class="k" x="210" y="106">OS</text>        <text class="v" x="328" y="106">Fedora 44 Workstation</text>
+    <text class="k" x="210" y="130">WM</text>        <text class="v" x="328" y="130">Hyprland (Wayland)</text>
+    <text class="k" x="210" y="154">Terminal</text>  <text class="v" x="328" y="154">Ghostty, tmux</text>
+    <text class="k" x="210" y="178">Shell</text>     <text class="v" x="328" y="178">zsh, starship</text>
+    <text class="k" x="210" y="202">Editor</text>    <text class="v" x="328" y="202">Neovim (LazyVim)</text>
+    <text class="k" x="210" y="226">CPU</text>       <text class="v" x="328" y="226">Intel i5-8400 (6 cores)</text>
+    <text class="k" x="210" y="250">GPU</text>       <text class="v" x="328" y="250">NVIDIA GTX 1050 Ti</text>
+    <text class="k" x="210" y="274">Memory</text>    <text class="v" x="328" y="274">16 GB</text>
+    <text class="k" x="210" y="298">Theme</text>     <text class="v" x="328" y="298">Catppuccin Mocha</text>
+    <text class="k" x="210" y="322">Toolchain</text> <text class="v" x="328" y="322">mise, pnpm, uv, podman</text>
+  </g>
+
+  <!-- Los 8 colores ANSI del tema, como los imprime fastfetch al final -->
+  <g>
+    <rect x="210" y="352" width="30" height="18" rx="2" fill="#45475a"/>
+    <rect x="244" y="352" width="30" height="18" rx="2" fill="#f38ba8"/>
+    <rect x="278" y="352" width="30" height="18" rx="2" fill="#a6e3a1"/>
+    <rect x="312" y="352" width="30" height="18" rx="2" fill="#f9e2af"/>
+    <rect x="346" y="352" width="30" height="18" rx="2" fill="#89b4fa"/>
+    <rect x="380" y="352" width="30" height="18" rx="2" fill="#cba6f7"/>
+    <rect x="414" y="352" width="30" height="18" rx="2" fill="#94e2d5"/>
+    <rect x="448" y="352" width="30" height="18" rx="2" fill="#bac2de"/>
+  </g>
+</svg>
